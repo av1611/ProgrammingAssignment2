@@ -8,7 +8,7 @@
 makeCacheMatrix <- function(x = matrix()) {
   # Proofing the matrix is square
   # otherwise, the function is going to be terminated
-  if (nrow(x)!=ncol(x))
+  if (nrow(x) != ncol(x))
     { stop("The matrix is not square, therefore it is not invertible")} 
   # Initializing the stored inverse value as to be NULL
   inverse <- NULL
@@ -64,7 +64,6 @@ cacheSolve <- function(x, ...) {
 # Testing the functions
 m <- matrix(1:4, 2, 2) # example matrix
 matrixCache <- makeCacheMatrix(m)
-
 
 matrixInversedNotCached <- cacheSolve(matrixCache)
 m %*% matrixInversedNotCached
